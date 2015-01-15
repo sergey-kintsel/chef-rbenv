@@ -53,7 +53,7 @@ when "redhat","centos","fedora", "amazon", "scientific"
   node.set['rbenv']['install_pkgs']   = %w{git grep}
   default['rbenv']['user_home_root']  = '/home'
 when "debian","ubuntu","suse"
-  node.set['rbenv']['install_pkgs']   = %w{git-core grep}
+  node.set['rbenv']['install_pkgs']   = %w{git-core grep libffi-dev}
   default['rbenv']['user_home_root']  = '/home'
 when "mac_os_x"
   node.set['rbenv']['install_pkgs']   = %w{git}
