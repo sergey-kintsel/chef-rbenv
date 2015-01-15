@@ -17,6 +17,10 @@
 # limitations under the License.
 #
 
+apt_package 'libffi-dev' do
+  action :install
+end
+
 include_recipe "rbenv::system_install"
 
 Array(node['rbenv']['plugins']).each do |plugin|
